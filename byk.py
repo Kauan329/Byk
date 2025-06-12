@@ -36,9 +36,9 @@ if "estoque" not in st.session_state:
         #Aparelhos 
  
         #Nokia
-        {"nome": "Nokia 1425G-A", "categoria": "Aparelhos", "quantidade_inicial": 73, "quantidade": 73},
-        {"nome": "Nokia 2425G-H", "categoria": "Aparelhos", "quantidade_inicial": 9, "quantidade": 9},
-        {"nome": "Nokia 140w-H", "categoria": "Aparelhos", "quantidade_inicial": 18, "quantidade": 18},
+        {"nome": "Nokia 1425G-A", "categoria": "Aparelhos", "quantidade_inicial": 148, "quantidade": 148},
+        {"nome": "Nokia 2425G-H", "categoria": "Aparelhos", "quantidade_inicial": 21, "quantidade": 21},
+        {"nome": "Nokia 140w-H", "categoria": "Aparelhos", "quantidade_inicial": 43, "quantidade": 43},
 
 
         #Huawei
