@@ -27,6 +27,36 @@ ARQUIVO_ESTOQUE_JSON = "estoque.json"
 tecnicos = ["Moraes", "Candido", "Lemes", "Outros"]
 CATEGORIAS_FIXAS = ["Insumos", "Infraestrutura", "Cabos", "Ferramentas", "Aparelhos"]
 
+with st.sidebar:
+    st.markdown(
+    """
+    <style>
+        /* Espaço para empurrar o logo para o fim da sidebar */
+        .sidebar-content:after {
+            content: "";
+            display: block;
+            height: 200px; /* Aumente ou diminua conforme necessário */
+        }
+
+        /* Estilo do contêiner da logo */
+        .logo-inferior {
+            position: fixed;
+            bottom: 20px;  /* Distância do rodapé */
+            left: 10px;    /* Distância da lateral esquerda */
+        }
+
+        /* Imagem da logo */
+        .logo-inferior img {
+            width: 50px;  /* Ajuste conforme sua logo */
+        }
+    </style>
+    <div class="logo-inferior">
+        <img src="https://speednetworktelecom.s3.sa-east-1.amazonaws.com/logos/logo_royal.png">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # --------- Funções ---------
 
 #histórico
