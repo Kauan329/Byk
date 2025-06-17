@@ -27,6 +27,7 @@ ARQUIVO_ESTOQUE_JSON = "estoque.json"
 tecnicos = ["Moraes", "Candido", "Lemes", "Outros"]
 CATEGORIAS_FIXAS = ["Insumos", "Infraestrutura", "Cabos", "Ferramentas", "Aparelhos"]
 
+#IMAGEM SIDEBAR INFERIOR ESQUERDA
 with st.sidebar:
     st.markdown(
     """
