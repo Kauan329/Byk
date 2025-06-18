@@ -13,7 +13,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 
 # Caminho para o JSON da conta de serviço
-credenciais = ServiceAccountCredentials.from_json_keyfile_name("estoque-streamlit-0e18736834b0", [
+credenciais = ServiceAccountCredentials.from_json_keyfile_name("estoque-streamlit-0e18736834b0.json", [
     "https://spreadsheets.google.com/feeds",
     "https://www.googleapis.com/auth/drive"
 ])
