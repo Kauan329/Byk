@@ -3,11 +3,30 @@ import pandas as pd
 import os
 import json
 from datetime import datetime
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
 #cd C:\Users\I\Desktop\IMBEROY
 #streamlit run byk.py
 #pip install pandas openpyxl
 #streamlit run byk.py --server.address=0.0.0.0
+
+
+# Caminho para o JSON da conta de serviço
+credenciais = ServiceAccountCredentials.from_json_keyfile_name("estoque-streamlit-0e18736834b0", [
+    "https://spreadsheets.google.com/feeds",
+    "https://www.googleapis.com/auth/drive"
+])
+
+client = gspread.authorize(credenciais)
+
+# Nome da planilha no seu Google Sheets
+sheet = client.open("bykplanilha").sheet1
+
+# Exemplo: adicionar uma linha ao histórico
+sheet.append_row(["2025-06-18 10:00", "Saída", "Samuel", "ONU", 5, 10])
+
+#caaaaaaaaaaaaaa
 
 st.set_page_config(page_title="Controle de Estoque", layout="wide")
 st.title("📦 Sistema de Controle de Estoque")
