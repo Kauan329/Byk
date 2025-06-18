@@ -3,6 +3,8 @@ import pandas as pd
 from datetime import datetime
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import json
+from io import StringIO
 
 
 #cd C:\Users\I\Desktop\IMBEROY
@@ -18,9 +20,9 @@ escopo = [
     "https://spreadsheets.google.com/feeds",
     "https://www.googleapis.com/auth/drive"
 ]
-credenciais = ServiceAccountCredentials.from_json_keyfile_name(
-    "estoque-streamlit-0e18736834b0.json", escopo
-)
+json_keyfile = json.loads(st.secrets["google"])
+credenciais = ServiceAccountCredentials.from_json_keyfile_dict(json_keyfile, escopo)
+
 cliente = gspread.authorize(credenciais)
 planilha = cliente.open("bykplanilha")
 estoque_sheet = planilha.worksheet("estoque")
