@@ -19,7 +19,7 @@ escopo = [
     "https://www.googleapis.com/auth/drive"
 ]
 credenciais = ServiceAccountCredentials.from_json_keyfile_name(
-    "estoque-streamlit-0e18736834b0.json", escopo
+    "estoque.json", escopo
 )
 cliente = gspread.authorize(credenciais)
 planilha = cliente.open("bykplanilha")
